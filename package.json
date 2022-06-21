@@ -1,11 +1,9 @@
 {
   "name": "com.mattermost.gender-inclusive-language",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Mattermost Plugin which actively listens (and prohibits) for language with racist, ableist, sexist, or other exclusionary histories.",
   "main": "webpack.config.js",
-  "dependencies": {
-    "react": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",

@@ -1,7 +1,13 @@
 {
   "id": "com.mattermost.gender-inclusive-language",
   "name": "Gender Inclusive Language",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "min_server_version": "5.12.0",
+  "description": "A Mattermost Plugin which actively listens (and prohibits) for language with racist, ableist, sexist, or other exclusionary histories.",
+  "homepage_url": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language",
+  "support_url": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language/issues",
+  "release_notes_url": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language/releases/tag/v1.0.0",
+  "icon_path": "assets/icon.png",
   "webapp": {
     "bundle_path": "main.js"
   }

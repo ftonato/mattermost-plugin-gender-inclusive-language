@@ -22,14 +22,21 @@ export default class Utils {
     return this.#forbidden;
   }
 
+  static getWords(post) {
+    const regex = /[^a-z0-9]/gi;
+    const words = post.split(regex);
+    return words.filter(word => word.toLowerCase()).filter(word => word.length > 0);
+  }
+
   findForbiddenWords(post) {
     let errors = [];
+    let draft = Utils.getWords(post);
 
     for (const {words, suggestion, others} of this.#forbidden) {
       let usedWord = null;
 
       words.some(word => {
-        if (post.toLowerCase().includes(word.toLowerCase())) {
+        if (draft.includes(word.toLowerCase())) {
           usedWord = word;
           return true;
         }
