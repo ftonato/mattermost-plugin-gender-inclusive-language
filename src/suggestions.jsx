@@ -335,6 +335,205 @@ const roles = {
       others: 'consort',
     },
   ],
+  greetings: [
+    {
+      words: ['dear sir', 'dear madam'],
+      suggestion: 'dear reader',
+      others: '',
+    },
+    {
+      words: [
+        'ladies',
+        'gentlemen',
+        'ladies and gentlemen',
+        'gentlemen and ladies',
+        'ladies & gentlemen',
+        'gentlemen & ladies',
+      ],
+      suggestion: 'everyone',
+      others: 'esteemed guests, honored attendees',
+    },
+    {
+      words: ['men & women', 'men and women', 'women & men', 'women and men'],
+      suggestion: 'everyone',
+      others: 'attendees, guests, adults, colleagues, coworkers',
+    },
+    {
+      words: ['boys & girls', 'girls & boys', 'boys and girls', 'girls and boys'],
+      suggestion: 'everyone',
+      others: 'attendees, guests, adults, colleagues, coworkers',
+    },
+    {
+      words: ['Mr.', 'Ms.', 'Mrs.', 'Miss', 'Madam', 'Mme.'],
+      suggestion: 'Mx. (pronounced "mix")',
+      others: '',
+    },
+  ],
+  weddings: [
+    {
+      words: ['bride', 'groom'],
+      suggestion: 'newlywed',
+      others: 'marrier, celebrant, spouse, broom',
+    },
+    {
+      words: ['maid of honor', 'matron of honor', 'man of honor'],
+      suggestion: 'person of honor',
+      others: '',
+    },
+    {
+      words: ['best man', 'best maid', 'best matron'],
+      suggestion: 'best person',
+      others: '',
+    },
+    {
+      words: ['bridesmaid', 'groomsman'],
+      suggestion: 'attendant',
+      others: '',
+    },
+    {
+      words: ['bridesmaids', 'groomsmen'],
+      suggestion: 'attendants',
+      others: 'wedding party',
+    },
+    {
+      words: ['flower girl', 'flower boy'],
+      suggestion: 'flower child',
+      others: 'flower person, flower pal',
+    },
+    {
+      words: ['bachelor', 'bachelorette'],
+      suggestion: 'bachelorx (pronounced "bachelor-ex")',
+      others: '',
+    },
+    {
+      words: ['hen party', 'stag party'],
+      suggestion: 'animal party',
+      others: 'fox party, nearlywed party',
+    },
+    {
+      words: ['maiden name'],
+      suggestion: 'family name',
+      others: 'birth name',
+    },
+  ],
+  miscellaneous: [
+    {
+      words: ['alumnus', 'alumna'],
+      suggestion: 'alum',
+      others: 'graduate',
+    },
+    {
+      words: ['alumni', 'alumnae'],
+      suggestion: 'alums',
+      others: 'graduates',
+    },
+    {
+      words: ['brethren'],
+      suggestion: 'laity',
+      others: '',
+    },
+    {
+      words: ['brotherhood', 'sisterhood'],
+      suggestion: 'siblinghood',
+      others: 'fellowship, camaraderie',
+    },
+    {
+      words: ['brotherly', 'sisterly'],
+      suggestion: 'siblingly',
+      others: 'kindly, helpfully',
+    },
+    {
+      words: ['brotherly love', 'sisterly love'],
+      suggestion: 'siblingly love',
+      others: 'charity, goodwill',
+    },
+    {
+      words: ['coed'],
+      suggestion: 'student',
+      others: '',
+    },
+    {
+      words: ['man (verb)'],
+      suggestion: 'to guard',
+      others: 'to staff, to operate, to mind',
+    },
+    {
+      words: ['man-made', 'woman-made'],
+      suggestion: 'synthetic',
+      others: 'artificial, hand-made, machine-made',
+    },
+    {
+      words: ['manhole'],
+      suggestion: 'utility hole',
+      others: 'access hole, sewer hole, mainenance hole',
+    },
+    {
+      words: ['manpower', 'womanpower'],
+      suggestion: 'personpower',
+      others: 'teampower, workers, workforce, staff',
+    },
+    {
+      words: ['meter-maid', 'meter-matron', 'meter-man'],
+      suggestion: 'meter-reader',
+      others: 'parking enforcement officer',
+    },
+    {
+      words: ['motherland', 'fatherland'],
+      suggestion: 'homeland',
+      others: '',
+    },
+  ],
+  pronoun_related: [
+    {
+      words: ['he', 'she', 'he/she'],
+      suggestion: 'they',
+      others: '',
+    },
+  ],
+  transgender_related: [
+    {
+      words: ['preferred pronouns'],
+      suggestion: 'personal pronouns',
+      others: '',
+    },
+    {
+      words: ['transsexual'],
+      suggestion: 'trans person',
+      others: 'transgender person',
+    },
+    {
+      words: ['sex change', 'sex reassignment'],
+      suggestion: 'gender affirmation',
+      others: 'transition care, change of gender marker',
+    },
+    {
+      words: ['biological man', 'biological woman'],
+      suggestion: 'cisgender person or non-transgender person',
+      others: '',
+    },
+    {
+      words: ['feminine pronouns', 'female pronouns'],
+      suggestion: 'she/her pronouns',
+      others: '',
+    },
+    {
+      words: ['masculine pronouns', 'male pronouns'],
+      suggestion: 'he/him pronouns',
+      others: '',
+    },
+    {
+      words: ['hermaphrodite'],
+      suggestion: 'intersex',
+      others: '',
+    },
+  ],
+  technology: [
+    {
+      words: ['white-list', 'black-list'],
+      suggestion: 'accept/reject list',
+      others: 'include/exclude, allow/disallow',
+    },
+  ],
 };
 
 const suggestions = [
@@ -348,6 +547,18 @@ const suggestions = [
   ...roles.master_mistress,
   // Phrases
   ...roles.general,
+  // Greetings
+  ...roles.greetings,
+  // Weddings
+  ...roles.weddings,
+  // Miscellaneous
+  ...roles.miscellaneous,
+  // Pronoun-related
+  ...roles.pronoun_related,
+  // Transgender-related
+  ...roles.transgender_related,
+  // Technology
+  ...roles.technology,
 ];
 
 export default suggestions;

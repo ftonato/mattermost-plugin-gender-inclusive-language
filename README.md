@@ -1,11 +1,27 @@
 <h1 align="center">
-  <img src="./plugin-gender-inclusive-language.png" alt="Mattermost Gender Inclusive Language Plugin Logo" width="350">
+  <img src="./assets/plugin-gender-inclusive-language.png" alt="Mattermost Gender Inclusive Language Plugin Logo" width="350">
   <br/>
   Mattermost Gender Inclusive Language Plugin
 </h1>
 
 The gender-inclusive-language is a Mattermost Plugin which actively listens (and prohibits) for
-language with racist, ableist, sexist, or other exclusionary histories.
+language with racist, ableist, sexist, or other exclusionary histories. <br>
+
+> The list of gender-inclusive language ideas we used in our project was built by United Nations
+> affiliates, government agencies, multinational organizations and others with the aim of creating
+> work environments that embrace equality. You can see the full list by following this
+> [link](https://github.com/joelparkerhenderson/gender-inclusive-language).
+
+<br>
+
+💡 We welcome
+[constructive feedback](https://github.com/ftonato/mattermost-plugin-gender-inclusive-language/issues/new?title=I%20would%20like%20to%20suggest...&body=Please%20fill%20this%20field%20with%20your%20suggestions...)
+
+---
+
+[![Demo Plugin](./assets/presentation.gif)](https://share.cleanshot.com/hyuG8d)
+
+---
 
 ## Installation
 
