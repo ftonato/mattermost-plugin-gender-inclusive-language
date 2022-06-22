@@ -1,11 +1,11 @@
-import React from 'react';
 import Utils from './utils';
 import {id as pluginId} from './manifest';
-import {defaultData} from './fetch';
+import {fetchLocalData} from './fetch';
 
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["initialize", "uninitialize"] }] */
 export default class GenderInclusiveLanguagePlugin {
   async initialize(registry) {
-    const {data} = await defaultData();
+    const {data} = await fetchLocalData();
     const utils = new Utils(data);
 
     registry.registerMessageWillBePostedHook(post => {
@@ -23,7 +23,7 @@ export default class GenderInclusiveLanguagePlugin {
   }
 
   uninitialize() {
-    //eslint-disable-next-line no-console
-    console.log(pluginId + '::uninitialize()');
+    // eslint-disable-next-line no-console
+    console.log(`${pluginId}::uninitialize()`);
   }
 }
