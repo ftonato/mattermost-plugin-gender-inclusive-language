@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 const {formatText, messageHtmlToComponent} = window.PostUtils;
 
 export default class Utils {
   #forbidden = [];
+
   #error = {
     message: '',
   };
@@ -29,9 +31,10 @@ export default class Utils {
   }
 
   findForbiddenWords(post) {
-    let errors = [];
-    let draft = Utils.getWords(post);
+    const errors = [];
+    const draft = Utils.getWords(post);
 
+    // eslint-disable-next-line
     for (const {words, suggestion, others} of this.#forbidden) {
       let usedWord = null;
 
@@ -44,15 +47,15 @@ export default class Utils {
       });
 
       if (usedWord) {
-        let message = `- **${usedWord}** for **${suggestion}**`;
-        let suffix = others ? `, or even (**${others}**)` : '';
+        const message = `- **${usedWord}** for **${suggestion}**`;
+        const suffix = others ? `, or even (**${others}**)` : '';
         errors.push(`${message}${suffix}`);
         usedWord = null;
       }
     }
 
     if (errors.length) {
-      let message = this.#error.message;
+      let {message} = this.#error;
       message += errors.join('\n');
       message = messageHtmlToComponent(formatText(message));
       return {post: null, error: {message}};
