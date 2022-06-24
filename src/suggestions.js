@@ -1,7 +1,7 @@
 const roles = {
   man_woman: [
     {
-      words: ['ad-man', 'ad-woman'],
+      words: ['ad-man', 'ad-woman', 'adman', 'adwoman'],
       suggestion: 'ad-person',
       others: 'advertising executive, promoter',
     },
@@ -529,7 +529,7 @@ const roles = {
   ],
   technology: [
     {
-      words: ['white-list', 'black-list'],
+      words: ['white-list', 'black-list', 'whitelist', 'blacklist'],
       suggestion: 'accept/reject list',
       others: 'include/exclude, allow/disallow',
     },

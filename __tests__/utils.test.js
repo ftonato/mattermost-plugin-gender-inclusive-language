@@ -10,7 +10,7 @@ describe('Utils class', () => {
     expect(utils.findForbiddenWords(post)).toMatchObject({post, error: null});
   });
 
-  test.skip('it should return a list of used words filtered by valid characters', () => {
+  test('it should return a list of used words filtered by valid characters', () => {
     const post = `Hello, do you know some forbidden words?
       Take a look in our list: (ad-man), black-list, whitelist, {---}, hello_world, FIANCÉE, bOy.!
       [BYe]
