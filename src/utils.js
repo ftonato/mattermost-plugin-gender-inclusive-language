@@ -25,9 +25,16 @@ export default class Utils {
   }
 
   static getWords(post) {
-    const regex = /[^a-z0-9]/gi;
+    /**
+     * \w Word = Matches any word character (alphanumeric & underscore)
+     * \- Escaped character = Matches a "-" character (char code 45)
+     * À-ú Range = Matches a character in the range "À" to "ú"
+     *             (char code 192 to 250). Case sensitive
+     */
+    const regex = /[^\w\-À-ú]+/gi;
+
     const words = post.split(regex);
-    return words.filter(word => word.toLowerCase()).filter(word => word.length > 0);
+    return words.filter(word => word.toLowerCase()).filter(word => word.length > 1);
   }
 
   findForbiddenWords(post) {
