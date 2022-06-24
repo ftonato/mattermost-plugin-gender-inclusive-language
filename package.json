@@ -9,16 +9,24 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@types/jest": "^28.1.3",
+    "babel-jest": "^28.1.1",
     "babel-loader": "^8.2.5",
     "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
     "build": "clear & webpack --mode=production",
-    "lint": "npx eslint src/**/**"
+    "lint": "npx eslint {src,__tests__}/**/**",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "npm test -- --coverage"
   },
   "keywords": [
     "diversity",
