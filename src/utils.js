@@ -9,7 +9,7 @@ export default class Utils {
   };
 
   constructor(
-    forbiddenWords,
+    forbiddenWords = [],
     errorMessage = '🌈  **Your phrase(s) would be more _inclusive_ if you substituted:** \n',
   ) {
     this.#forbidden = forbiddenWords;
@@ -17,7 +17,7 @@ export default class Utils {
   }
 
   get error() {
-    return {error: this.#error};
+    return this.#error;
   }
 
   get forbidden() {
@@ -34,8 +34,9 @@ export default class Utils {
     const errors = [];
     const draft = Utils.getWords(post);
 
+    const forbiddenWords = this.forbidden.entries();
     // eslint-disable-next-line
-    for (const {words, suggestion, others} of this.#forbidden) {
+    for (const [_index, {words, suggestion, others}] of forbiddenWords) {
       let usedWord = null;
 
       words.some(word => {
@@ -55,7 +56,7 @@ export default class Utils {
     }
 
     if (errors.length) {
-      let {message} = this.#error;
+      let {message} = this.error;
       message += errors.join('\n');
       message = messageHtmlToComponent(formatText(message));
       return {post: null, error: {message}};
