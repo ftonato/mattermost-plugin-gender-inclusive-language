@@ -13,4 +13,5 @@ module.exports = {
     '!**/src/constants.js',
     '!**/src/index.js',
   ],
+  coverageReporters: ['text'],
 };

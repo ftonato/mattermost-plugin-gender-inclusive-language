@@ -6,12 +6,18 @@ on:
       - main
 
 jobs:
-  coverage:
-    permissions:
-      checks: write
-      pull-requests: write
-      contents: read
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: ArtiomTr/jest-coverage-report-action@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run the tests
+        run: npm run test:cov
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
